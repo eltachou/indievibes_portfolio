@@ -1,0 +1,188 @@
+/* General styling for artist page bottom section */
+.artist-grid-container {
+    margin: 2vh 0;
+    padding: 0 2.5rem;
+}
+
+.trending, .happening-now, .trending-title, .happening-now-title, .happening-now-small-title {
+    grid-column: span 6;
+    text-align: left;
+    align-items: start;
+}
+
+/* .trending-wrap, .happening-wrap {
+    grid-row: 2 / 8;
+} */
+
+.trending-title > h2, .happening-now-title > h2, .happening-now-small-title > h2 {
+    padding: 0;
+    margin: 0 0 30px 0 ;
+    border: 0;
+}
+
+.happening-now-small-title > h2 {
+    display: none
+}
+
+
+
+/* Trending */
+.trending-content {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    background-color: var(--lighterbackground);
+    /* border: 2px solid var(--khaki); */
+    border-radius: 10px;
+    margin: 0 30px 30px 0;
+    padding: 15px;
+    height: 100%;
+    text-align: center;
+    place-items: center;
+    box-shadow: 0px 2px 12px 0px rgba(0,0,0,0.2);
+}
+
+
+.trending-content img, .happening-container img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.ranking-info {
+    display: grid;
+    grid-column: 3 / 7;
+    text-align: left;
+}
+
+.ranking-info h3 {
+    display: flex;
+    align-items: center;
+}
+
+.ranking-info .ranking-bottom {
+    display: flex;
+}
+
+.ranking-bottom > p {
+    margin: 1rem;
+}
+
+.ranking-follow-small {
+    display: none;
+}
+
+/* Happening now */
+.happening-container {
+    display: grid;
+    border-radius: 10px;
+    margin: 0 30px 10px 0;
+    padding: 10px;
+    height: 100%;
+    text-align: center;
+    justify-content: start;
+}
+
+.title-wrap, .content-wrap {
+    display: flex;
+    padding: 0 10px 0 10px;
+    justify-content: flex-start;
+}
+
+
+.content-wrap {
+    display: flex;
+    padding: 0 10px 10px 10px;
+}
+
+.live-img > img {
+    margin-right: 10px;
+    padding: 2px;
+    border: 5px solid var(--main-bluegrey);
+}
+
+
+
+.content-wrap > .new-music-container, .new-music-wrap {
+    margin: 0;
+    padding: 0;
+}
+
+.content-wrap .new-in-music {
+    grid-template-columns: repeat(6, 1fr);
+}
+
+.new-in-music > .music-card02 {
+    grid-column: span 2;
+}
+
+
+
+.event-banner-small {
+    display: grid;
+    justify-content: center;
+    height: 100%;
+    width: 80%;
+    overflow: hidden;
+}
+
+.small-banner-wrap {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+.event-banner-small img {
+    height: 90%;
+    width: 110%;
+    border-radius: 10px;
+}
+
+
+.music-img .music-audio > i {
+    font-size: 2rem;
+}
+
+.music-img .music-audio > i:hover {
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 1415px) {
+    .trending, .happening-now {
+        grid-column: span 12;
+    }
+
+    .happening-now-title {
+        display: none;
+    }
+
+    .happening-now-small-title > h2 {
+        display: block;
+    }
+}
+
+
+@media only screen and (max-width: 768px) {
+    .trending-content img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .ranking-bottom .ranking-follow {
+        display: none;
+    }
+
+    .ranking-info h3 {
+        margin-left: 10px;
+    }
+
+    .ranking-bottom p {
+        margin: 1rem 0.6rem;
+    }
+    
+    .ranking-follow-small {
+        display: block;
+        margin-left: 10px;
+    }
+}

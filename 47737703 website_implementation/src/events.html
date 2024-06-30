@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <title>IndieVibes</title>
+
+        <!-- All images used in this website are from pexels.com and Canvas for simulation purpose. 
+        Credits to the photographers. Reference included in Design Report.-->
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="css/general_style.css">
+        <link rel="stylesheet" href="css/events.css">
+        <link rel="stylesheet" href="css/section_style.css">
+        <link rel="stylesheet" href="css/homepage.css">
+
+        <!-- Icons from Font Awesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <!-- Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+        
+        <!-- Javascript -->
+        <script src="js/interaction.js" defer></script>
+        <script src="js/homepage.js" defer></script>
+    </head>
+
+    <body>
+
+        <div class="flex-container">
+            <!-- Header -->
+            <header class="flex-header">
+                <nav class="flex-nav nav-bar" aria-label="Navigation bar">
+                    <div class="logo">
+                        <img class="logo-icon" src="media/icons/music-logo.png" alt="IndieVibes Logo">
+                        <a href="index.html" class="homepage-tab">IndieVibes</a>
+                    </div>
+                    
+                    <ul class="menu">
+                        <li><a href="artists.html" class="artist-tab">Artists</a></li>
+                        <li><a href="events.html" class="event-tab">Tours/Events</a></li>
+                        <li><a href="community.html" class="community-tab">Community</a></li>
+                    </ul>
+
+                    <div class="nav-right">
+                        <ul class="findmusic-menu">
+                            <li><a href="findmusic.html" class="dropdown-tab" aria-label="Hover to find music by preference or click to browse all">Find Music  <i class="fa fa-caret-down" aria-hidden="true"></i></a>
+                                <ul class="sub-menu">
+                                    <li><a href="findmusic.html#navtogenre" aria-label="Browse music by genre">Browse by Genre</a></li>
+                                    <li><a href="findmusic.html#navtoartist" aria-label="Browse music by artist">Browse by Artists</a></li>
+                                    <li><a href="findmusic.html#navtorecommend" aria-label="Recommended music for you">Recommended for you</a></li>
+                                    <li><a href="upload.html" aria-label="Upload your music here">Upload your music</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                        <div class="flex-search search" aria-label="search bar">
+                            <form>
+                                <input type="text" placeholder="Search">
+                            </form>
+                        </div>
+
+                        <div class="flex-login login-container" aria-label="login and register button">
+                            <div class="container">
+                                <button type="button" class="login" aria-label="login" onclick="redirectForm('login-page')">Login</button>
+                                <button type="button" class="register" aria-label="signup" onclick="redirectForm('signup-page')">Sign Up</button>
+                            </div>
+                        </div>   
+                    </div>
+
+                    <a href="#" class="toggle-menu" aria-label="Toggle menu to show full tab">
+                        <span class="bars"></span>
+                        <span class="bars"></span>
+                        <span class="bars"></span>
+                    </a>
+
+                </nav>
+            </header> 
+
+
+            
+            <!-- Main Section -->
+            <main class="flex-main-content main-content">
+                <br>
+                <h1 class="main-title">Tours/Events</h1>
+                <hr>
+
+                <!-- Tours Section(Top) -->
+                <section class="artist-section general-section">
+                    <div class="general-title-top">
+                        <h2>Ready to vibe on...?</h2>
+                    </div>
+                    
+
+                    <div class="grid-container">
+                        <div class="tours-container">
+                            <!-- Carousel took from homepage banner -->
+                            <div class="carousel">
+                                <div class="carousel-item">
+                                    <div class="top-left-title top-left-title-event">
+                                        <h2>DvdB Live Tour 2023</h2>
+                                        <hr>
+                                    </div>
+                                    <img class="img01" src="media/image/homepage/pexels-01small.jpg" alt="DvdB Concert Image" style="width: 100%">
+                                </div>
+                                <div class="carousel-item">
+                                    <img class="img02" src="media/image/homepage/canva-concert05.png" alt="Music meetup with artist Kristi Cha" style="width: 100%">
+                                </div>
+                                <div class="carousel-item">
+                                    <img class="img03" src="media/image/homepage/canva-concert02.png" alt="2023 Dandelion live" style="width: 100%">
+                                </div>
+                            </div>
+        
+                            <div class="carousel-dot">
+                                <span class="dots" onclick="slide(1)"></span>
+                                <span class="dots" onclick="slide(2)"></span>
+                                <span class="dots" onclick="slide(3)"></span>
+                            </div>
+                        </div>
+
+                        <div class="button-under-img no-function">
+                            <h3 class="no-function">Get Tickets</h3>
+                        </div>
+                        <div class="button-under-img">
+                            <h3 class="no-function">Learn More</h3>
+                        </div>
+                        
+                    </div>
+
+                </section>
+
+            </main>
+
+
+
+            <!-- Footer -->
+            <footer class="flex-footer" aria-label="Footer menu">
+                <div class="footer-small">
+                    <h2 class="artist-title">Artists</h2>
+                    <h2 class="listener-title">Listeners</h2>
+                    <h2 class="guide-title">Guides</h2>
+                    <h2 class="support-title">Support</h2>
+                </div>
+                <ul class="footer-menu">
+                    <li class="artist">
+                        <h2 class="artist-title">Artists</h2>
+                        <p>Join as artist</p>
+                        <p>Artist Area</p>
+                    </li>
+                    <li class="listener">
+                        <h2 class="listener-title">Listeners</h2>
+                        <p>Join as listener</p>
+                        <p>Listener Area</p>
+                    </li>
+                    <li class="guide">
+                        <h2 class="guide-title">Guides</h2>
+                        <p>Get Started</p>
+                        <p>FAQ</p>
+                    </li>
+                    <li class="support">
+                        <h2 class="support-title">Support</h2>
+                        <p>Contact us</p>
+                        <p>Report</p>
+                    </li>
+                    <li>
+                        <div id="google_translate_element" class="google-translate" style="display: flex;"></div>
+                    </li>
+                </ul>
+                <ul class="others-menu">
+                    <li class="others">
+                        <p>About</p>
+                        <p>Service</p>
+                        <p>Privacy Policy</p>
+                        <p>Terms and Conditions</p>
+
+                        <ul class="social-icons">
+                            <li>
+                                <a class="facebook" href="https://www.facebook.com/" target="_blank" aria-label="Indivibes facebook">
+                                    <i class="fa fa-facebook-official" aria-hidden="true"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="instagram" href="https://www.instagram.com" target="_blank" aria-label="IndieVibes instagram">
+                                    <i class="fa fa-instagram" aria-hidden="true"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="youtube" href="https://www.youtube.com" target="_blank" aria-label="IndieVibes youtube">
+                                    <i class="fa fa-youtube-play" aria-hidden="true"></i>
+                                </a>
+                            </li>
+                        </ul>
+                        <p> &copy; 2023 indivibes.com</p>
+                    </li>
+                </ul>
+            </footer>
+
+        </div> <!-- Closing the flex-container -->  
+
+        <!-- Google Translate -->
+        <script type="text/javascript">
+            function googleTranslateElementInit() {
+                new google.translate.TranslateElement(
+                    {pageLanguage: 'en'},
+                    'google_translate_element'
+                );
+            }
+        </script>
+
+        <script type="text/javascript"
+            src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+        </script>
+    </body>

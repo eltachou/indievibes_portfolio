@@ -1,0 +1,183 @@
+/* Music cards & Artists cards & their control buttons */
+
+/* Carousel Control Buttons - Left & Right */
+.music-carousel-prev, .artist-carousel-prev {
+    cursor: pointer;
+    position: absolute;
+    width: auto;
+    padding: 10px;
+    font-weight: bold;
+    font-size: 1.25rem;
+    transition: 0.3s ease;
+    text-decoration: none;
+    color: var(--main-lightgrey);
+    background-color: var(--main-bluegrey);
+    opacity: 50%;
+    border: 2px solid var(--main-bluegrey);
+    border-radius: 0 5px 5px 0;
+    z-index: 2;
+    left: 0;
+}
+
+.music-carousel-next, .artist-carousel-next {
+    cursor: pointer;
+    position: absolute;
+    width: auto;
+    padding: 10px;
+    font-weight: bold;
+    font-size: 1.25rem;
+    transition: 0.3s ease;
+    text-decoration: none;
+    color: var(--main-lightgrey);
+    background-color: var(--main-bluegrey);
+    opacity: 50%;
+    border: 2px solid var(--main-bluegrey);
+    border-radius: 5px 0 0 5px;
+    z-index: 2;
+    right: 0;
+}
+
+.music-carousel-prev:hover, .music-carousel-next:hover,
+.artist-carousel-prev:hover, .artist-carousel-next:hover {
+    opacity: 100%;
+    background-color: var(--khaki);
+    border: 2px solid var(--khaki);
+}
+
+
+
+/* Music Cards & Artist cards - Homepage & Community & Artists & Find Music */
+.music-section > h1, .artist-section > h1 {
+    text-align: center;
+    font-size: 2rem;
+    letter-spacing: 3px;
+
+}
+
+.music-section > hr, .artist-section > hr {
+    color: var(--main-bluegrey);
+    height: 10%;
+}
+
+.music-container, .artist-container, .music-query {
+    width: 100%;
+    margin: 2.5vh 0;
+}
+
+.music-container .music-carousel, .artist-container .artist-carousel, .music-query .music-carousel {
+    display: grid;
+    grid-auto-flow: column;
+    align-items: center;
+    justify-content: start;
+    padding: 0;
+    margin: 0;
+    grid-auto-columns: calc((100% / 5) - 15px);
+    gap: 32px;
+    z-index: 0;
+    overflow: hidden;
+    scroll-behavior: smooth;
+    overflow-x: auto;
+}
+
+/* Hide the scrollbar on cards */
+.music-carousel::-webkit-scrollbar, .artist-carousel::-webkit-scrollbar {
+    display: none;
+}
+
+.music-carousel .music-card, .artist-carousel .artist-card {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--lighterbackground);
+    border: 2px solid var(--main--background);
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.music-card .music-img, .artist-card .artist-img {
+    text-align: center;
+}
+
+.music-card .music-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border: 2px solid var(--main--background);
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.artist-card .artist-img img {
+    width: 80%;
+    height: 80%;
+    object-fit: cover;
+    border: 2px solid var(--main--background);
+    border-radius: 50%;
+}
+
+.music-card .music-img > p.genre-style {
+    font-style: italic;
+}
+
+.music-card .music-img > hr {
+    width: 50%;
+}
+
+
+.music-audio {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    position: relative;
+}
+
+.music-audio > audio {
+    position: absolute;
+    padding-bottom: 10px;
+    transform: scale(0.8);
+
+}
+
+
+.music-audio > i {
+    position: absolute;
+    font-size: 4rem;
+    padding-bottom: 15px;
+    color: var(--lighterbackground);
+}
+
+.music-audio > i:hover {
+    color: var(--main-background);
+    cursor: pointer;
+}
+
+
+/* Music card, Artist card and Audio bar adjust according to screen sizes */
+@media only screen and (max-width: 1700px) {
+    .music-audio > audio {
+        width: 200px;
+    }
+}
+
+@media only screen and (max-width: 1215px) {
+    .music-audio > audio {
+        width: 130px;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .music-container .music-carousel, .artist-container .artist-carousel {
+        grid-auto-columns: calc((100% / 3) - 10px);
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .music-container .music-carousel, .artist-container .artist-carousel {
+        grid-auto-columns: 100%;
+    }
+    .music-audio > audio {
+        width: 90%;
+    }
+}

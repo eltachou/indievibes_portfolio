@@ -1,0 +1,82 @@
+/* Browse by Genre & Individual grid colors */
+.col-12 {
+    display: grid;
+    grid-column: span 4;
+    text-align: center;
+    cursor: pointer;
+    font-size: 2.2rem;
+    font-weight: 450;
+    border: 2px solid var(--main--background);
+    border-radius: 10px;
+    padding: 20px 10px;
+}
+
+.grid-color01 {
+    background-color: var(--khaki);
+    box-shadow: 0px 2px 12px 0px rgba(0,0,0,0.2);
+}
+
+.grid-color01 > a {
+    color: var(--sup-darkbluegrey);
+}
+
+.grid-color02 {
+    background-color: var(--sup-bluegrey);
+    box-shadow: 0px 2px 12px 0px rgba(0,0,0,0.2);
+}
+
+.grid-color02 > a, .grid-color03 > a {
+    color: var(--main-lightgrey);
+}
+
+
+/* Browse by Artist & Browse all grid styles and color */
+.artist-col-12 {
+    display: grid;
+    grid-column: span 6;
+    text-align: center;
+    cursor: pointer;
+    font-size: 2.2rem;
+    font-weight: 450;
+    border: 2px solid var(--main--background);
+    border-radius: 10px;
+    padding: 20px 10px;
+}
+
+.browse-all {
+    display: grid;
+    grid-column: span 12;
+    text-align: center;
+    cursor: pointer;
+    font-size: 2.2rem;
+    font-weight: 450;
+    border: 2px solid var(--main--background);
+    border-radius: 10px;
+    padding: 20px 10px;
+}
+
+.grid-color03 {
+    background-color: var(--sup-darkbluegrey);
+    box-shadow: 0px 2px 12px 0px rgba(0,0,0,0.2);
+}
+
+
+
+.grid-color01:hover, .grid-color02:hover, .browse-all:hover {
+    outline: 5px solid var(--lighterbackground);
+}
+
+
+/* Medium screen size */
+@media only screen and (max-width: 768px) {
+    .col-12, .artist-col-12, .browse-all {
+        font-size: 1.8rem;
+    }
+}
+
+/* Mobile screen size */
+@media only screen and (max-width: 600px) {
+    .col-12, .artist-col-12, .browse-all {
+        font-size: 1.5rem;
+    }
+}

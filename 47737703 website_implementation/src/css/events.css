@@ -1,0 +1,50 @@
+.tours-container, .event-container {
+    grid-column: span 12;
+}
+
+.tours-container img {
+    z-index: 0;
+}
+
+.top-left-title-event {
+    display: flex;
+    flex-direction: column;
+    top: 10%;
+}
+
+.top-left-title-event h2 {
+    margin: 0;
+    font-size: 3rem;
+}
+
+
+.button-under-img {
+    display: grid;
+    grid-column: span 6;
+    justify-content: center;
+    cursor: pointer;
+    border: none;
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+    text-align: center;
+    font-weight: 400;
+    background-color: var(--main-bluegrey);
+    color: var(--main-lightgrey);
+    box-shadow: 0px 2px 12px 0px rgba(0,0,0,0.2);
+    border-radius: 12px;
+    transition: 0.3s;
+}
+
+.button-under-img h3 {
+    margin: 10px;
+}
+
+.button-under-img:hover {
+    background-color: var(--khaki);
+}
+
+@media only screen and (max-width: 768px) {
+    .top-left-title-event h2 {
+        font-size: 2rem;
+    }
+}

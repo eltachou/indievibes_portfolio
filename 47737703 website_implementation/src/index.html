@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>IndieVibes</title>
+
+        <!-- All images used in this website are from pexels.com and Canvas for simulation purpose. 
+        Credits to the photographers. Reference included in Design Report.-->
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="css/general_style.css">
+        <link rel="stylesheet" href="css/homepage.css">
+        <link rel="stylesheet" href="css/section_style.css">
+        <link rel="stylesheet" href="css/card_styles.css">
+
+        <!-- Icons from Font Awesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <!-- Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+        
+        <!-- Javascript -->
+        <script src="js/interaction.js" defer></script>
+        <script src="js/musiccard.js" defer></script>
+        <script src="js/artistcard.js" defer></script>
+        <script src="js/homepage.js" defer></script>
+
+    </head>
+
+    <body>
+
+        <div class="flex-container">
+            <!-- Header -->
+            <header class="flex-header">
+                <nav class="flex-nav nav-bar" aria-label="Navigation bar">
+                    <div class="logo">
+                        <img class="logo-icon" src="media/icons/music-logo.png" alt="IndieVibes Logo">
+                        <a href="index.html" class="homepage-tab">IndieVibes</a>
+                    </div>
+                    
+                    <ul class="menu">
+                        <li><a href="artists.html" class="artist-tab">Artists</a></li>
+                        <li><a href="events.html" class="event-tab">Tours/Events</a></li>
+                        <li><a href="community.html" class="community-tab">Community</a></li>
+                    </ul>
+
+                    <div class="nav-right">
+                        <ul class="findmusic-menu">
+                            <li><a href="findmusic.html" class="dropdown-tab" aria-label="Hover to find music by preference or click to browse all">Find Music  <i class="fa fa-caret-down" aria-hidden="true"></i></a>
+                                <ul class="sub-menu">
+                                    <li><a href="findmusic.html#navtogenre" aria-label="Browse music by genre">Browse by Genre</a></li>
+                                    <li><a href="findmusic.html#navtoartist" aria-label="Browse music by artist">Browse by Artists</a></li>
+                                    <li><a href="findmusic.html#navtorecommend" aria-label="Recommended music for you">Recommended for you</a></li>
+                                    <li><a href="upload.html" aria-label="Browse music by artist">Upload your music</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                        <div class="flex-search search" aria-label="search bar">
+                            <form>
+                                <input type="text" id="search" placeholder="Search">
+                            </form>
+                        </div>
+
+                        <div class="flex-login login-container" aria-label="login and register button">
+                            <div class="container">
+                                <button type="button" class="login" id="login" aria-label="login" onclick="redirectForm('login-page')">Login</button>
+                                <button type="button" class="register" id="register" aria-label="signup" onclick="redirectForm('signup-page')">Sign Up</button>
+                            </div>
+                        </div>    
+                    </div>
+
+                    <a href="#" class="toggle-menu" aria-label="Toggle menu to show full tab">
+                        <span class="bars"></span>
+                        <span class="bars"></span>
+                        <span class="bars"></span>
+                    </a>
+
+                </nav>
+            </header> 
+
+            
+            <!-- Main Section -->
+            <main class="flex-main-content main-content">
+                <!-- event-banner: Homepage & Events tab only -->
+                <!-- Top banner(Top) -->
+                <section class="event-banner" aria-label="Event banners, check out the event tab for more information">
+                    <div class="carousel">
+                        <div class="carousel-item">
+                            <img class="img01" src="media/image/homepage/canva-concert05.png" alt="Music meetup with artist Kristi Cha" style="width: 100%">
+                        </div>
+                        <div class="carousel-item">
+                            <div class="top-left-title">What's on
+                                <hr>
+                            </div>
+                            <img class="img02" src="media/image/homepage/pexels-01small.jpg" alt="DvdB Concert Image" style="width: 100%">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="img03" src="media/image/homepage/canva-concert02.png" alt="2023 Dandelion live" style="width: 100%">
+                        </div>
+                    </div>
+
+                    <div class="carousel-dot">
+                        <span class="dots" onclick="slide(1)"></span>
+                        <span class="dots" onclick="slide(2)"></span>
+                        <span class="dots" onclick="slide(3)"></span>
+                    </div>
+                </section>
+
+                <!-- New Vibes(Mid) -->
+                <section class="music-section">
+                    <h1>New Vibes</h1>
+                    <hr>
+                    <div class="music-container">
+                        <ul class="music-carousel">
+                            <li class="music-card">
+                                <div class="music-img">
+                                    <div class="music-audio">
+                                        <i class="fa fa-play-circle" aria-hidden="true" style="display: block;"></i>
+                                        <img src="media/image/musiccover-1.jpg" alt="music01 Neon Space by DvdB">
+                                        <audio class='audio-bar' controls style="display: none;">
+                                            <source src="media/music/music_demo.mp3" type="audio/mpeg">
+                                            Your browser does not support the audio element.
+                                        </audio>
+                                    </div>
+                                    <h3>Neon Space</h3>
+                                    <p>DvdB</p>
+                                    <hr>
+                                    <p class="genre-style">Lofi/Rnb</p>
+                                </div>
+                            </li>
+                            <li class="music-card">
+                                <div class="music-img">
+                                    <div class="music-audio">
+                                        <i class="fa fa-play-circle" aria-hidden="true" style="display: block;"></i>
+                                        <img src="media/image/musiccover-2.jpg" alt="music02 Think of prayer by Maddox">
+                                        <audio class='audio-bar' controls style="display: none;">
+                                            <source src="media/music/music_demo.mp3" type="audio/mpeg">
+                                            Your browser does not support the audio element.
+                                        </audio>
+                                    </div>
+                                    <h3>Think of prayer</h3>
+                                    <p>Maddox</p>
+                                    <hr>
+                                    <p class="genre-style">Pop/Folk</p>
+                                </div>
+                            </li>
+                            <li class="music-card">
+                                <div class="music-img">
+                                    <div class="music-audio">
+                                        <i class="fa fa-play-circle" aria-hidden="true" style="display: block;"></i>
+                                        <img src="media/image/musiccover-3.jpg" alt="music03 It's yesterday by DvdB">
+                                        <audio class='audio-bar' controls style="display: none;">
+                                            <source src="media/music/music_demo.mp3" type="audio/mpeg">
+                                            Your browser does not support the audio element.
+                                        </audio>
+                                    </div>
+                                    <h3>It's yesterday</h3>
+                                    <p>DvdB</p>
+                                    <hr>
+                                    <p class="genre-style">Lofi/Rnb</p>
+                                </div>
+                            </li>
+                            <li class="music-card">
+                                <div class="music-img">
+                                    <div class="music-audio">
+                                        <i class="fa fa-play-circle" aria-hidden="true" style="display: block;"></i>
+                                        <img src="media/image/musiccover-4.jpg" alt="music04 Summertime by Henry Yan">
+                                        <audio class='audio-bar' controls style="display: none;">
+                                            <source src="media/music/music_demo.mp3" type="audio/mpeg">
+                                            Your browser does not support the audio element.
+                                        </audio>
+                                    </div>
+                                    <h3>Summertime</h3>
+                                    <p>Henry Yan</p>
+                                    <hr>
+                                    <p class="genre-style">Rnb</p>
+                                </div>
+                            </li>
+                            <li class="music-card">
+                                <div class="music-img">
+                                    <div class="music-audio">
+                                        <i class="fa fa-play-circle" aria-hidden="true" style="display: block;"></i>
+                                        <img src="media/image/musiccover-5.jpg" alt="music05 You can't catch me by DJ Danni">
+                                        <audio class='audio-bar' controls style="display: none;">
+                                            <source src="media/music/music_demo.mp3" type="audio/mpeg">
+                                            Your browser does not support the audio element.
+                                        </audio>
+                                    </div>
+                                    <h3>You can't catch me</h3>
+                                    <p>DJ Danni</p>
+                                    <hr>
+                                    <p class="genre-style">Electronic</p>
+                                </div>
+                            </li>
+                            <li class="music-card">
+                                <div class="music-img">
+                                    <div class="music-audio">
+                                        <i class="fa fa-play-circle" aria-hidden="true" style="display: block;"></i>
+                                        <img src="media/image/musiccover-6.jpg" alt="music06 FOMOFI by DJ Danni">
+                                        <audio class='audio-bar' controls style="display: none;">
+                                            <source src="media/music/music_demo.mp3" type="audio/mpeg">
+                                            Your browser does not support the audio element.
+                                        </audio>
+                                    </div>
+                                    <h3>FOMOFI</h3>
+                                    <p>DJ Danni</p>
+                                    <hr>
+                                    <p class="genre-style">Electronic/Lofi</p>
+                                </div>
+                            </li>
+                            <div class="carousel-button">
+                                <button id="prev" class="music-carousel-prev">&#10094;</button>
+                                <button id="next" class="music-carousel-next">&#10095;</button>
+                            </div>
+                        </ul>
+                        <br>
+                    </div>
+                    <br>
+                </section>
+                
+                <!-- Artists(Bottom) -->
+                <section class="artist-section">
+                    <br>
+                    <h1>Artists</h1>
+                    <hr>
+                    <div class="artist-container">
+                        <ul class="artist-carousel">
+                            <li class="artist-card">
+                                <div class="artist-img">
+                                    <img src="media/image/artist-1.jpg" alt="artist01">
+                                    <h3>Kristi Cha</h3>
+                                    <p>@kristicha</p>
+                                </div>
+                            </li>
+                            <li class="artist-card">
+                                <div class="artist-img">
+                                    <img src="media/image/artist-2.jpg" alt="artist02">
+                                    <h3>Henry Yan</h3>
+                                    <p>@henryyy</p>
+                                </div>
+                            </li>
+                            <li class="artist-card">
+                                <div class="artist-img">
+                                    <img src="media/image/artist-3.jpg" alt="artist03">
+                                    <h3>DvdB</h3>
+                                    <p>@dvdb</p>
+                                </div>
+                            </li>
+                            <li class="artist-card">
+                                <div class="artist-img">
+                                    <img src="media/image/artist-4.jpg" alt="artist04">
+                                    <h3>DJ Danni</h3>
+                                    <p>@djdanni</p>
+                                </div>
+                            </li>
+                            <li class="artist-card">
+                                <div class="artist-img">
+                                    <img src="media/image/artist-5.jpg" alt="artist05">
+                                    <h3>Maddox</h3>
+                                    <p>@maddoxmusic</p>
+                                </div>
+                            </li>
+                            <li class="artist-card">
+                                <div class="artist-img">
+                                    <img src="media/image/artist-6.jpg" alt="artist06">
+                                    <h3>Edujazzo</h3>
+                                    <p>@edurado</p>
+
+                                </div>
+                            </li>
+                            <div class="artist-carousel-button">
+                                <button id="artist-prev" class="music-carousel-prev artist-carousel-prev">&#10094;</button>
+                                <button id="artist-next" class="music-carousel-next artist-carousel-next">&#10095;</button>
+                            </div>
+                        </ul>
+                    </div>
+                    <br>
+                </section>
+                
+
+            </main>
+
+
+
+            <!-- Footer -->
+            <footer class="flex-footer" aria-label="Footer menu">
+                <div class="footer-small">
+                    <h2 class="artist-title">Artists</h2>
+                    <h2 class="listener-title">Listeners</h2>
+                    <h2 class="guide-title">Guides</h2>
+                    <h2 class="support-title">Support</h2>
+                </div>
+
+                <ul class="footer-menu">
+                    <li class="artist">
+                        <h2 class="artist-title">Artists</h2>
+                        <p>Join as artist</p>
+                        <p>Artist Area</p>
+                    </li>
+                    <li class="listener">
+                        <h2 class="listener-title">Listeners</h2>
+                        <p>Join as listener</p>
+                        <p>Listener Area</p>
+                    </li>
+                    <li class="guide">
+                        <h2 class="guide-title">Guides</h2>
+                        <p>Get Started</p>
+                        <p>FAQ</p>
+                    </li>
+                    <li class="support">
+                        <h2 class="support-title">Support</h2>
+                        <p>Contact us</p>
+                        <p>Report</p>
+                    </li>
+                    <li>
+                        <div id="google_translate_element" class="google-translate" style="display: flex;"></div>
+                    </li>
+                </ul>
+                <ul class="others-menu">
+                    <li class="others">
+                        <p>About</p>
+                        <p>Service</p>
+                        <p>Privacy Policy</p>
+                        <p>Terms and Conditions</p>
+
+                        <ul class="social-icons">
+                            <li>
+                                <a class="facebook" href="https://www.facebook.com/" target="_blank" aria-label="Indivibes facebook">
+                                    <i class="fa fa-facebook-official" aria-hidden="true"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="instagram" href="https://www.instagram.com" target="_blank" aria-label="IndieVibes instagram">
+                                    <i class="fa fa-instagram" aria-hidden="true"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="youtube" href="https://www.youtube.com" target="_blank" aria-label="IndieVibes youtube">
+                                    <i class="fa fa-youtube-play" aria-hidden="true"></i>
+                                </a>
+                            </li>
+                        </ul>
+                        <p> &copy; 2023 indivibes.com</p>
+                    </li>
+                </ul>
+            </footer>
+
+        </div> <!-- Closing the flex-container -->  
+
+        <!-- Google Translate -->
+        <script type="text/javascript">
+            function googleTranslateElementInit() {
+                new google.translate.TranslateElement(
+                    {pageLanguage: 'en'},
+                    'google_translate_element'
+                );
+            }
+        </script>
+
+        <script type="text/javascript"
+            src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+        </script>
+    </body>

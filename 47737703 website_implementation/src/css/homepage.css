@@ -1,0 +1,73 @@
+/* "What's on" title on img */
+.top-left-title {
+    position: absolute;
+    color:var(--main-lightgrey);
+    margin: 3rem;
+    z-index: 1;
+    font-size: 3rem;
+    font-weight: 500;
+}
+
+.top-left-title > hr {
+    margin: 0;
+}
+
+
+/* Carousel-top banner on homepage */
+.carousel {
+    display: flex;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    max-width: 100vw;
+}
+
+.carousel-item {
+    display: none;
+    width: 100%;
+}
+
+.carousel-dot {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+
+}
+
+.dots {
+    cursor: pointer;
+    display: inline-block;
+    height: 1rem;
+    width: 1rem;
+    margin: 5px 5px;
+    border-radius: 50%;
+    border: 2px solid var(--main-navy);
+    background-color: var(--main--background);
+    transition: 0.2s ease;
+}
+
+.dots:hover, .dots:active, .dots.active {
+    background-color: var(--main-bluegrey);
+} 
+
+
+
+
+/* "What's on" title on img */
+.top-left-title {
+    position: absolute;
+    color:var(--main-lightgrey);
+    margin: 3rem;
+    z-index: 1;
+    font-size: 3rem;
+    font-weight: 500;
+}
+
+.top-left-title > hr {
+    margin: 0;
+}
+
+
+
+

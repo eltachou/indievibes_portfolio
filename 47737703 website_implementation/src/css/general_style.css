@@ -1,0 +1,509 @@
+/* General styles for body, html, header & footer */
+
+:root {
+    --main-background: #FAEDCD;
+    --main-bluegrey: #5A6F7A;
+    --main-navy: #011638;
+    --main-lightgrey: #EEF0F2;
+    --sup-darkbluegrey: #37454D;
+    --sup-bluegrey: #78888F;
+    --khaki: #D4A373;
+    --lighterbackground: #FEFAE0;
+    --yellow: #EEC643;
+    --babyblue: #74C0FC;
+}
+
+html, body {
+    background-color: var(--main-background);
+    font-family: 'Rubik', sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    max-width: 100vw;
+    }
+
+.flex-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.flex-header, .flex-footer {
+    flex-shrink: 0;
+}
+
+.flex-main-content {
+    flex: 1;
+}
+
+.main-content {
+    color: var(--main-navy);
+}
+
+header {
+    display: flex;
+    align-items: center;
+}
+
+.nav-bar {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    width: 100%;
+    height: auto;
+    background-color: var(--main-bluegrey);
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 20px;
+    padding-right: 50px;
+    z-index: 2;
+
+}
+
+.logo {
+    display: flex;
+    font-size: 2rem;
+    letter-spacing: 1px;
+    font-weight: bold;
+    padding: 5px;
+}
+
+.logo > img {
+    width: 35px;
+    height: 35px;
+}
+
+.logo .homepage-tab {
+    text-decoration: none;
+    color: var(--main-lightgrey);
+    margin-left: 5px;
+    align-items: center;
+}
+
+
+.menu, .findmusic-menu {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-right {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.menu li, .findmusic-menu li  {
+    list-style: none;
+    position: relative;
+    display: block;
+}
+
+.menu li a, .findmusic-menu li a {
+    display: block;
+    color: var(--main-lightgrey);
+    padding: 1.25rem;
+    letter-spacing: 2px;
+    font-size: 1.25rem;
+    font-weight: 500;
+    text-decoration: none;
+    text-align: center;
+    transition: 0.3s ease;
+}
+
+.menu li a:hover, .findmusic-menu li a:hover {
+    color: var(--main-background);
+}
+
+
+.nav-bar .sub-menu li a:hover, .nav-bar .sub-menu li a:active {
+    background: var(--khaki);
+    color: var(--main-lightgrey);
+}
+
+.nav-bar .sub-menu {
+    visibility: hidden;
+    position: absolute;
+    margin-left: -40px;
+}
+
+.nav-bar li:hover ul.sub-menu {
+    visibility: visible;
+}
+
+.nav-bar .sub-menu li a {
+    width: 220px;
+    background: var(--main-bluegrey);
+    text-align: left;
+    font-size: 1rem;
+    font-weight: 400;
+    padding: 20px;
+    box-shadow: 0px 5px 15px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+
+
+/* Search bar section - Search form and enter button */
+.search {
+    display: flex;
+    align-items: center;
+}
+
+.search form {
+    display: flex;
+    margin: 0;
+}
+
+.search input { /* search bar area */
+    padding: 10px 4px 10px 40px;
+    border: 2px solid var(--main-lightgrey);
+    border-radius: 10px;
+    outline: none;
+    font-size: 1rem;
+    background: var(--main-lightgrey) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' class='bi bi-search' viewBox='0 0 16 16'%3E%3Cpath d='M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z'%3E%3C/path%3E%3C/svg%3E")
+    no-repeat 12px center;
+}
+
+::placeholder {
+    font-style: italic;
+    font-family: 'Rubik', sans-serif;
+}
+
+.search input:hover, .search input:focus {
+    border: 2px solid var(--khaki);
+}
+
+
+
+/* Login & Sign-Up button*/
+.login-container {
+    display: flex;
+    align-items: center;
+}
+
+.login-container .container {
+    display: flex;
+    margin: 0;
+    padding: 10px;
+}
+
+.login-container button {
+    border: none;
+    border-radius: 12px;
+    outline: none;
+    font-size: 1rem;
+    font-weight: 400;
+    width: 100px;
+    padding: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.login {
+    background: none;
+    color: var(--main-lightgrey);
+}
+
+.register {
+    background-color: var(--main-lightgrey);
+    color: var(--main-navy);
+}
+
+.register:hover {
+    background-color: var(--khaki);
+    color: var(--main-lightgrey);
+}
+
+
+
+/* Toggle menu - show when the screen size changes */
+.toggle-menu {
+    position: absolute;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 20px;
+    padding: 10px;
+}
+
+.toggle-menu .bars {
+    height: 3px;
+    width: 100%;
+    background-color: var(--main-lightgrey);
+    border-radius: 10px;
+}
+
+
+@media only screen and (max-width: 1415px) {
+    .toggle-menu {
+        display: flex;
+    }
+
+    .logo {
+        font-size: 1.5rem;
+    }
+
+    .logo > img {
+        width: 25px;
+        height: 25px;
+    }
+
+    .nav-bar {
+        padding: 10px;
+        flex-direction: column;
+        align-items: flex-start;
+
+    }
+
+    .menu, .nav-right {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .menu li, .findmusic-menu li {
+        text-align: center;
+    }
+
+    .menu li a, .findmusic-menu li a {
+        padding: 0.5rem;
+    }
+
+    .menu.active, .nav-right.active {
+        display: flex;
+    }
+}
+
+
+
+/* Footer section */
+footer {
+    display: flex;
+    width: 100%;
+    height: auto;
+    background-color: var(--main-bluegrey);
+    color:var(--main-lightgrey);
+    position: relative;
+    bottom: 0;
+    align-items: center;
+    text-decoration: none;
+    justify-content: space-between;
+}
+
+.footer-menu {
+    width: 100%;
+    display: flex;
+    justify-content: left;
+    padding: 0;
+    margin: 20px 20px 20px 50px;
+}
+
+.others-menu {
+    width: 100%;
+    display: flex;
+    justify-content: right;
+    padding: 0;
+    margin: 20px;
+}
+
+.footer-menu li, .others-menu li {
+    list-style: none;
+    position: relative;
+    display: block;
+    padding-left: 30px;
+    margin: 10px 80px 10px 0px;
+    border-left: 2px solid var(--main-lightgrey);
+}
+
+.footer-menu li h2 {
+    margin-top: 0;
+    margin-bottom: 35px;
+    font-weight: 500;
+}
+
+.footer-menu li p {
+    width: 180%;
+}
+
+.others-menu li p {
+    width: 150%;
+}
+
+/* About & Social logos */
+.others {
+    margin-left: 400px;
+    border-left: 2px solid var(--main-lightgrey);
+}
+
+.others-menu .others .social-icons {
+    width: 150%;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.others .social-icons li {
+    border: 0;
+    padding: 0;
+    margin: 0;
+    display: inline-block;
+}
+
+.social-icons li .facebook {
+    color:var(--main-lightgrey);
+    font-size: 30px;
+    padding: 5px;
+}
+
+.social-icons li .instagram {
+    color:var(--main-lightgrey);
+    font-size: 30px;
+    padding: 5px;
+}
+
+.social-icons li .youtube {
+    color:var(--main-lightgrey);
+    font-size: 30px;
+    padding: 5px;
+}
+
+
+.footer-small {
+    display: flex;
+    flex-direction: column;
+    margin-left: 50px;
+    padding: 10px;
+    border-left: 2px solid var(--main-lightgrey);
+    display: none;
+}
+
+.footer-small h2 {
+    margin: 10px;
+}
+
+
+@media only screen and (max-width: 1415px) {
+
+    .footer-small {
+        display: flex;
+    }
+
+    .footer-menu {
+        display: none;
+    }
+}
+
+
+
+
+
+/* OTHERS */
+
+/* Login & Signup popup form & Upload music form */
+.form-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--main-background);
+    gap: 30px;
+}
+
+.upload-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 70vh;
+    background-color: var(--main-background);
+}
+
+.form-popup {
+    position: absolute;
+    border-radius: 10px;
+    width: 50%;
+    max-width: 500px;
+    padding: 30px;
+    background-color: var(--lighterbackground);
+    box-shadow: 0px 5px 15px 0px rgba(0,0,0,0.2);
+}
+
+.form-content {
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    color: var(--main-navy);
+}
+
+.form-content h1 {
+    font-size: 2rem;
+    letter-spacing: 2px;
+}
+
+.popup-input, .upload-content {
+    margin: 20px 0;
+    height: 2rem;
+}
+
+.popup-input input, .upload-content input {
+    height: 100%;
+    width: 90%;
+}
+
+.login-button, .upload-button {
+    margin: 10px;
+    padding: 10px;
+}
+
+.login-button button, .upload-button input {
+    width: 100%;
+    font-size: 1.2rem;
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    background-color: var(--main-bluegrey);
+    color: var(--main-lightgrey);
+    cursor: pointer;
+}
+
+
+.login-button button:hover, .upload-button input:hover {
+    background-color: var(--khaki);
+
+}
+
+
+.forgot-pwd, .popup-link {
+    font-size: 1rem;
+    font-weight: 400;
+    padding: 5px;
+
+}
+
+
+
+/* Login Signup link swap in form */
+/* Form link swap referenced from CodingLab */
+.form-popup.signup-form {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.form-wrapper.switch-form .form-popup.signup-form {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.form-wrapper.switch-form .form-popup.login-form {
+    opacity: 0;
+    pointer-events: none;
+}

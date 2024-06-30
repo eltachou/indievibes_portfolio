@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>IndieVibes</title>
+
+        <!-- All images used in this website are from pexels.com and Canvas for simulation purpose. 
+        Credits to the photographers. Reference included in Design Report.-->
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="css/general_style.css">
+        <link rel="stylesheet" href="css/section_style.css">
+        <link rel="stylesheet" href="css/card_styles.css">
+        <link rel="stylesheet" href="css/community.css">
+        
+        <!-- Icons from Font Awesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <!-- Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+        
+        <!-- Javascript-->
+        <script src="js/interaction.js" defer></script>
+        <script src="js/artistcard.js" defer></script>
+    </head>
+
+    <body>
+
+        <div class="flex-container">
+            <!-- Header -->
+            <header class="flex-header">
+                <nav class="flex-nav nav-bar" aria-label="Navigation bar">
+                    <div class="logo">
+                        <img class="logo-icon" src="media/icons/music-logo.png" alt="IndieVibes Logo">
+                        <a href="index.html" class="homepage-tab">IndieVibes</a>
+                    </div>
+                    
+                    <ul class="menu">
+                        <li><a href="artists.html" class="artist-tab">Artists</a></li>
+                        <li><a href="events.html" class="event-tab">Tours/Events</a></li>
+                        <li><a href="community.html" class="community-tab">Community</a></li>
+                    </ul>
+
+                    <div class="nav-right">
+                        <ul class="findmusic-menu">
+                            <li><a href="findmusic.html" class="dropdown-tab" aria-label="Hover to find music by preference or click to browse all">Find Music  <i class="fa fa-caret-down" aria-hidden="true"></i></a>
+                                <ul class="sub-menu">
+                                    <li><a href="findmusic.html#navtogenre" aria-label="Browse music by genre">Browse by Genre</a></li>
+                                    <li><a href="findmusic.html#navtoartist" aria-label="Browse music by artist">Browse by Artists</a></li>
+                                    <li><a href="findmusic.html#navtorecommend" aria-label="Recommended music for you">Recommended for you</a></li>
+                                    <li><a href="upload.html" aria-label="Upload your music here">Upload your music</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                        <div class="flex-search search" aria-label="search bar">
+                            <form>
+                                <input type="text" placeholder="Search">
+                            </form>
+                        </div>
+
+                        <div class="flex-login login-container" aria-label="login and register button">
+                            <div class="container">
+                                <button type="button" class="login" aria-label="login" onclick="redirectForm('login-page')">Login</button>
+                                <button type="button" class="register" aria-label="signup" onclick="redirectForm('signup-page')">Sign Up</button>
+                            </div>
+                        </div> 
+                    </div>
+
+                    <a href="#" class="toggle-menu" aria-label="Toggle menu to show full tab">
+                        <span class="bars"></span>
+                        <span class="bars"></span>
+                        <span class="bars"></span>
+                    </a>
+
+                </nav>
+            </header> 
+
+
+            
+            <!-- Main Section -->
+            <main class="flex-main-content main-content">
+                <br>
+                <h1 class="main-title">Community</h1>
+                <hr>
+
+                <!-- Join Communities(Top) -->
+                <section class="artist-section general-section">
+                    <div class="general-title-top">
+                        <h2>Join Communities</h2>
+                        <div class="top-button">
+                            <button class="discover">Discover+</button>
+                        </div>
+                    </div>
+
+                    <div class="artist-container community-top-container">
+                        <ul class="artist-carousel">
+                            <li class="artist-card">
+                                <div class="artist-img">
+                                    <img src="media/image/artist-1.jpg" style="cursor: default;" alt="artist01">
+                                    <h3>Kristi Cha</h3>
+                                    <button class="artist-button" value="Join">Join</button>
+                                </div>
+                            </li>
+                            <li class="artist-card">
+                                <div class="artist-img">
+                                    <img src="media/image/artist-2.jpg" style="cursor: default;" alt="artist02">
+                                    <h3>Henry Yan</h3>
+                                    <button class="artist-button" value="Join">Join</button>
+                                </div>
+                            </li>
+                            <li class="artist-card">
+                                <div class="artist-img">
+                                    <img src="media/image/artist-3.jpg" style="cursor: default;" alt="artist03">
+                                    <h3>DvdB</h3>
+                                    <button class="artist-button" value="Join">Join</button>
+                                </div>
+                            </li>
+                            <li class="artist-card">
+                                <div class="artist-img">
+                                    <img src="media/image/artist-4.jpg" style="cursor: default;" alt="artist04">
+                                    <h3>DJ Danni</h3>
+                                    <button class="artist-button" value="Join">Join</button>
+                                </div>
+                            </li>
+                            <li class="artist-card">
+                                <div class="artist-img">
+                                    <img src="media/image/artist-5.jpg" style="cursor: default;" alt="artist05">
+                                    <h3>Maddox</h3>
+                                    <button class="artist-button" value="Join">Join</button>
+                                </div>
+                            </li>
+                            <li class="artist-card">
+                                <div class="artist-img">
+                                    <img src="media/image/artist-6.jpg" style="cursor: default;" alt="artist06">
+                                    <h3>Edujazzo</h3>
+                                    <button class="artist-button" value="Join">Join</button>
+
+                                </div>
+                            </li>
+                            <div class="artist-carousel-button">
+                                <button id="artist-prev" class="music-carousel-prev artist-carousel-prev">&#10094;</button>
+                                <button id="artist-next" class="music-carousel-next artist-carousel-next">&#10095;</button>
+                            </div>
+                        </ul>
+                    </div>
+                <br>
+                </section>
+
+
+                    <!-- Community Feeds(Bottom) -->
+                <section class="artist-section general-section">
+                    <div class="general-title-top">
+                        <h2>Community Feeds</h2>
+                    </div>
+
+                    <div class="grid-container">
+                        <h2>From Artists</h2>
+
+                        <!-- Artist feed 01 -->
+                        <div class="feed-12 grid-row01 grid-color grid-col01">
+                            <!-- Block left -->
+                            <div class="artist-com"> 
+                                <img src="media/image/artist-3.jpg" alt="artist03">
+                                <h4>DvdB</h4>
+                            </div>
+                            <!-- Block right - comment -->
+                            <div class="content-com">
+                                <h4>@dvdb</h4>
+                                <p>Check out my page for more 2023 tour details!</p>
+                            </div>
+                            <!-- Block right - time -->
+                            <div class="post-time">
+                                <p>Yesterday at 15:31 (AEST)</p>
+                            </div>
+                            <!-- Block right - icons -->
+                            <div class="feed-icon">
+                                <div class="icon-container">
+                                    <button class="like-button"><i class="fa fa-heart-o" aria-hidden="true"></i></button>
+                                    <button><i class="fa fa-commenting-o" aria-hidden="true"></i></button>
+                                    <button class="save-button"><i class="fa fa-bookmark-o" aria-hidden="true"></i></button>
+                                </div>
+                            </div> 
+                        </div>
+
+                        <!-- Artist feed 02 -->
+                        <div class="feed-12 grid-row01 grid-color grid-col02">
+                            <div class="artist-com">
+                                <img src="media/image/artist-5.jpg" alt="artist03">
+                                <h4>Maddox</h4>
+                            </div>
+                            <div class="content-com">
+                                <h4>@maddoxmusic</h4>
+                                <p>Working on something new, stay tuned!</p>
+                            </div>
+                            <div class="post-time">
+                                <p>Yesterday at 20:21 (AEST)</p>
+                            </div>
+                            <div class="feed-icon">
+                                <div class="icon-container">
+                                    <button class="like-button"><i class="fa fa-heart-o" aria-hidden="true"></i></button>
+                                    <button><i class="fa fa-commenting-o" aria-hidden="true"></i></button>
+                                    <button class="save-button"><i class="fa fa-bookmark-o" aria-hidden="true"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>  <!-- close grid container 1 -->
+
+
+                    <!-- From Listeners - API comments used here -->
+                    <div class="grid-container">
+                        <h2>From Listeners</h2>
+
+                        <!-- Listeners Feed 01 (API) -->
+                        <div class="feed-12 grid-row02 grid-color grid-col01">
+                            <!-- Block left -->
+                            <div class="artist-com"> 
+                                <img src="media/image/artist-4.jpg" alt="artist03">
+                                <h4>DJ Danni</h4>
+                            </div>
+                            <!-- Block right - comment -->
+                            <div class="content-com" id="comment-fetch">
+                                <h4 class="username-api"></h4>
+                                <p class="comment-api"></p>
+                            </div>
+                            <!-- Block right - time -->
+                            <div class="post-time">
+                                <p>Today at 15:31 (AEST)</p>
+                            </div>
+                            <!-- Block right - icons -->
+                            <div class="feed-icon">
+                                <div class="icon-container">
+                                    <button class="like-button"><i class="fa fa-heart-o" aria-hidden="true"></i></button>
+                                    <button><i class="fa fa-commenting-o" aria-hidden="true"></i></button>
+                                    <button class="save-button"><i class="fa fa-bookmark-o" aria-hidden="true"></i></button>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <!-- Listeners Feed 02 -->
+                        <div class="feed-12 grid-row02 grid-color grid-col02">
+                            <div class="artist-com">
+                                <img src="media/image/artist-2.jpg" alt="artist03">
+                                <h4>Henry Yan</h4>
+                            </div>
+                            <div class="content-com">
+                                <h4>@janedoe</h4>
+                                <p>OMG the solo at the end is epic.</p>
+                            </div>
+                            <div class="post-time">
+                                <p>Today at 22:49 (AEST)</p>
+                            </div>
+                            <div class="feed-icon">
+                                <div class="icon-container">
+                                    <button class="like-button"><i class="fa fa-heart-o" aria-hidden="true"></i></button>
+                                    <button><i class="fa fa-commenting-o" aria-hidden="true"></i></button>
+                                    <button class="save-button"><i class="fa fa-bookmark-o" aria-hidden="true"></i></button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="feed-12 grid-row03 grid-color grid-col01">
+                            <div class="artist-com">
+                                <img src="media/image/artist-2.jpg" alt="artist03">
+                                <h4>Henry Yan</h4>
+                            </div>
+                            <div class="content-com">
+                                <h4>@russooo</h4>
+                                <p>It's HENRYYYY!</p>
+                            </div>
+                            <div class="post-time">
+                                <p>Today at 20:13 (AEST)</p>
+                            </div>
+                            <div class="feed-icon">
+                                <div class="icon-container">
+                                    <button class="like-button"><i class="fa fa-heart-o" aria-hidden="true"></i></button>
+                                    <button><i class="fa fa-commenting-o" aria-hidden="true"></i></button>
+                                    <button class="save-button"><i class="fa fa-bookmark-o" aria-hidden="true"></i></button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="feed-12 grid-row03 grid-color grid-col02">
+                            <div class="artist-com">
+                                <img src="media/image/artist-1.jpg" alt="artist03">
+                                <h4>Kristi Cha</h4>
+                            </div>
+                            <div class="content-com">
+                                <h4>@jen0723</h4>
+                                <p>YAY!</p>
+                            </div>
+                            <div class="post-time">
+                                <p>Today at 18:20 (AEST)</p>
+                            </div>
+                            <div class="feed-icon">
+                                <div class="icon-container">
+                                    <button class="like-button"><i class="fa fa-heart-o" aria-hidden="true"></i></button>
+                                    <button><i class="fa fa-commenting-o" aria-hidden="true"></i></button>
+                                    <button class="save-button"><i class="fa fa-bookmark-o" aria-hidden="true"></i></button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="feed-12 grid-row03 grid-color grid-col01">
+                            <div class="artist-com">
+                                <img src="media/image/artist-3.jpg" alt="artist03">
+                                <h4>Dvdb</h4>
+                            </div>
+                            <div class="content-com">
+                                <h4>@zac</h4>
+                                <p>My fav song!</p>
+                            </div>
+                            <div class="post-time">
+                                <p>Today at 19:42 (AEST)</p>
+                            </div>
+                            <div class="feed-icon">
+                                <div class="icon-container">
+                                    <button class="like-button"><i class="fa fa-heart-o" aria-hidden="true"></i></button>
+                                    <button><i class="fa fa-commenting-o" aria-hidden="true"></i></button>
+                                    <button class="save-button"><i class="fa fa-bookmark-o" aria-hidden="true"></i></button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="feed-12 grid-row03 grid-color grid-col01">
+                            <div class="artist-com">
+                                <img src="media/image/artist-4.jpg" alt="artist03">
+                                <h4>DJ Danni</h4>
+                            </div>
+                            <div class="content-com comment-form">
+                                <form action="#" id="comment-form" enctype="multipart/form-data">
+                                    <input type="text" name="user" id="comment-user" placeholder="Your Name">
+                                    <input type="text" name="comment" id="comment-content" placeholder="Say something...">
+                                </form>
+                                
+                            </div>
+                            <div class="post-time">
+                                <p>Today at 15:31 (AEST)</p>
+                            </div>
+                            <div class="comment-submit">
+                                <div class="icon-container">
+                                    <button type="submit" id="comment-submit" form="comment-form">Submit</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>  <!-- close grid container 2 -->
+                    
+                </section>
+        
+            </main>
+
+
+
+            <!-- Footer -->
+            <footer class="flex-footer" aria-label="Footer menu">
+                <div class="footer-small">
+                    <h2 class="artist-title">Artists</h2>
+                    <h2 class="listener-title">Listeners</h2>
+                    <h2 class="guide-title">Guides</h2>
+                    <h2 class="support-title">Support</h2>
+                </div>
+                <ul class="footer-menu">
+                    <li class="artist">
+                        <h2 class="artist-title">Artists</h2>
+                        <p>Join as artist</p>
+                        <p>Artist Area</p>
+                    </li>
+                    <li class="listener">
+                        <h2 class="listener-title">Listeners</h2>
+                        <p>Join as listener</p>
+                        <p>Listener Area</p>
+                    </li>
+                    <li class="guide">
+                        <h2 class="guide-title">Guides</h2>
+                        <p>Get Started</p>
+                        <p>FAQ</p>
+                    </li>
+                    <li class="support">
+                        <h2 class="support-title">Support</h2>
+                        <p>Contact us</p>
+                        <p>Report</p>
+                    </li>
+                    <li>
+                        <div id="google_translate_element" class="google-translate" style="display: flex;"></div>
+                    </li>
+                </ul>
+
+
+                <ul class="others-menu">
+                    <li class="others">
+                        <p>About</p>
+                        <p>Service</p>
+                        <p>Privacy Policy</p>
+                        <p>Terms and Conditions</p>
+
+                        <ul class="social-icons">
+                            <li>
+                                <a class="facebook" href="https://www.facebook.com/" target="_blank" aria-label="Indivibes facebook">
+                                    <i class="fa fa-facebook-official" aria-hidden="true"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="instagram" href="https://www.instagram.com" target="_blank" aria-label="IndieVibes instagram">
+                                    <i class="fa fa-instagram" aria-hidden="true"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="youtube" href="https://www.youtube.com" target="_blank" aria-label="IndieVibes youtube">
+                                    <i class="fa fa-youtube-play" aria-hidden="true"></i>
+                                </a>
+                            </li>
+                        </ul>
+                        <p> &copy; 2023 indivibes.com</p>
+                    </li>
+                </ul>
+            </footer>
+
+        </div> <!-- Closing the flex-container -->  
+
+        <!-- Fetch API & Community general Javascript-->
+        <script src="js/community.js" defer></script>
+
+
+        <!-- Google Translate -->
+        <script type="text/javascript">
+            function googleTranslateElementInit() {
+                new google.translate.TranslateElement(
+                    {pageLanguage: 'en'},
+                    'google_translate_element'
+                );
+            }
+        </script>
+
+        <script type="text/javascript"
+            src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+        </script>
+    </body>
