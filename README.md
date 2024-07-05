@@ -12,34 +12,34 @@ Notes:
 
 
 4. Javascripts:
-    a. fetch_api.js
+    - fetch_api.js
         - Includes API for music query page, music upload page (POST & GET).
-    b. interaction.js
+    - interaction.js
         - General Javascripts for all pages.
         - Includes navbar toggle menu, navbar button clicks, login/signup page, music audio play.
-    c. homepage.js
+    - homepage.js
         - Includes banner carousel for homepage and events page.
-    d. musiccard.js
+    - musiccard.js
         - Affects most pages that includes music cards.
         - Includes music card carousel.
-    e. artistcard.js
+    - artistcard.js
         - Affects most pages that includes artist cards.
         - Includes artist card carousel.
-    f. community.js
+    - community.js
         - Javascript for Community page
         - Includes join button click, like/comment/save buttons click, Comment API (POST & GET).
-    g. artist.js
+    - artist.js
         - Javascript for Artist page
         - Includes follow button click
 
 5. Current responsive parts:
-    a. Music cards & Artist cards & Audio bars
-    b. Homepage top banner
-    c. Navigation bar
-    d. Footer
-    e. Artist page (all)
-    f. Tours/Events page (all)
-    g. Community page (all)
-    h. Login/Sign up form
-    i. Upload Music page
-    j. Music query page (linked from findmusic.html)
+    - Music cards & Artist cards & Audio bars
+    - Homepage top banner
+    - Navigation bar
+    - Footer
+    - Artist page (all)
+    - Tours/Events page (all)
+    - Community page (all)
+    - Login/Sign up form
+    - Upload Music page
+    - Music query page (linked from findmusic.html)
